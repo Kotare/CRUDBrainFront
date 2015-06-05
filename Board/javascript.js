@@ -1,9 +1,9 @@
 $(document).ready(function() {
-   var Board = function( selector ) {
-    var $elem = $( selector );
-    function initialize() {
-    };
-    initialize();
+
+  var Board = {
+    _id: "",
+    connections: [],
+    bubbles: [],
   };
 
   function Bubble (x,y, randId){
@@ -22,7 +22,6 @@ $(document).ready(function() {
   };
 
   $(function(){
-  	new Board('#board');
   	$("#board").on("click", function(e){
       var randId = guid();
   		renderBubble(new Bubble(e.pageY, e.pageX, randId));
@@ -36,7 +35,7 @@ $(document).ready(function() {
   function renderBubble(bubble) {
   	$('#board').append(
   		"<div class='bubble' id=" + bubble.bubbleId + ">" +
-  		"<div class='header'> <a class='delete' contenteditable='false'>X </a> </div>" +
+  		"<div class='header'> <a class='delete' contenteditable='false'>X </a><a class='link'>+</a> </div>" +
   		"<div class='content' contentEditable='true'></div>"+
       "<div class='footer'>" +
       "<a class='scrollUp' href='#'> &#9650 </a>" +
