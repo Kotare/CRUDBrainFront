@@ -16,17 +16,16 @@
   box-shadow: -2px 2px 5px #555;
   overflow: hidden;
   border-radius: 50%;
+  background: radial-gradient(circle at 33% 33%, #5cabff, #000);
 }
 
 .bubble .header {
-  background-color: #613f83;
   text-align: center;
   padding: 2px;
   min-height: 20px;
 }
 
 .bubble .header:hover {
-  background-color: #312042;
   color: white;
 }
 
@@ -54,7 +53,6 @@
 }
 
 .bubble .footer {
-  background-color: #613f83;
   text-align: center;
   padding: 2px;
   margin-top: -10px;
